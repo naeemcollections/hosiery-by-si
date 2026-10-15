@@ -1,0 +1,405 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-slider",
+      "settings": {
+        "seconds": 5
+      },
+      "blocks": {
+        "b1": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "Winter sale",
+            "title": "Layers, cut in glass light.",
+            "text": "Merino and quilted vests for the cold commute. Sale prices are live.",
+            "button": "Shop vests",
+            "link": "#vests",
+            "sample": "banner-vest.jpg"
+          }
+        },
+        "b2": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "Socks",
+            "title": "The quiet uniform.",
+            "text": "Crew, dress and ankle socks in a winter palette.",
+            "button": "Shop socks",
+            "link": "#socks",
+            "sample": "banner-socks.jpg"
+          }
+        },
+        "b3": {
+          "type": "slide",
+          "settings": {
+            "eyebrow": "Boxers",
+            "title": "Cut to disappear.",
+            "text": "Modal, cotton and long briefs that sit clean under winter cloth.",
+            "button": "Shop boxers",
+            "link": "#boxers",
+            "sample": "banner-boxers.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ]
+    },
+    "vests": {
+      "type": "product-rail",
+      "settings": {
+        "anchor": "vests",
+        "kicker": "Vests",
+        "heading": "A layer you forget.",
+        "copy": "Merino rib, thermal zip and a quilted shell.",
+        "layout": "rail",
+        "limit": 4
+      },
+      "blocks": {
+        "v1": {
+          "type": "product",
+          "settings": {
+            "title": "Merino Rib Vest",
+            "price": 2450,
+            "compare": 3200,
+            "badge": "Sale",
+            "blurb": "Fine-gauge ivory merino. Light in a heated room, warm on the walk out.",
+            "sample": "vest-ivory.jpg"
+          }
+        },
+        "v2": {
+          "type": "product",
+          "settings": {
+            "title": "Thermal Zip Vest",
+            "price": 3200,
+            "compare": 3900,
+            "badge": "Sale",
+            "blurb": "Charcoal thermal with a short zip. The layer under a coat.",
+            "sample": "vest-charcoal.jpg"
+          }
+        },
+        "v3": {
+          "type": "product",
+          "settings": {
+            "title": "Fog V-Neck Vest",
+            "price": 2890,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Fog grey V-neck in a fine wool gauge.",
+            "sample": "vest-fog.jpg"
+          }
+        },
+        "v4": {
+          "type": "product",
+          "settings": {
+            "title": "Quilted Ink Vest",
+            "price": 5400,
+            "compare": 6400,
+            "badge": "Sale",
+            "blurb": "Ink quilted shell. The outer layer when a coat is too much.",
+            "sample": "vest-ink.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4"
+      ]
+    },
+    "socks": {
+      "type": "product-rail",
+      "settings": {
+        "anchor": "socks",
+        "kicker": "Socks",
+        "heading": "Under every shoe.",
+        "copy": "Oatmeal crews, navy dress ribs, trail cushion and a silk-blend ankle.",
+        "layout": "rail",
+        "limit": 4
+      },
+      "blocks": {
+        "s1": {
+          "type": "product",
+          "settings": {
+            "title": "Oatmeal Crew 3-Pack",
+            "price": 1650,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Three oatmeal merino crews.",
+            "sample": "socks-oat.jpg"
+          }
+        },
+        "s2": {
+          "type": "product",
+          "settings": {
+            "title": "Navy Rib Dress Sock",
+            "price": 890,
+            "compare": 1100,
+            "badge": "Sale",
+            "blurb": "Fine navy rib for leather shoes.",
+            "sample": "socks-navy.jpg"
+          }
+        },
+        "s3": {
+          "type": "product",
+          "settings": {
+            "title": "Stone Trail Sock",
+            "price": 1190,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Stone grey trail crew with a cushioned sole.",
+            "sample": "socks-stone.jpg"
+          }
+        },
+        "s4": {
+          "type": "product",
+          "settings": {
+            "title": "Silk Ankle Sock",
+            "price": 1450,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Black silk-blend ankle for loafers.",
+            "sample": "socks-black.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    "boxers": {
+      "type": "product-rail",
+      "settings": {
+        "anchor": "boxers",
+        "kicker": "Boxers",
+        "heading": "Cut to disappear.",
+        "copy": "Modal trunks, cotton briefs and a longer winter cut.",
+        "layout": "rail",
+        "limit": 4
+      },
+      "blocks": {
+        "x1": {
+          "type": "product",
+          "settings": {
+            "title": "Slate Modal Trunk",
+            "price": 1290,
+            "compare": 1590,
+            "badge": "Sale",
+            "blurb": "Slate modal trunk with a short leg.",
+            "sample": "boxer-slate.jpg"
+          }
+        },
+        "x2": {
+          "type": "product",
+          "settings": {
+            "title": "White Cotton Brief",
+            "price": 990,
+            "compare": 0,
+            "badge": "",
+            "blurb": "White cotton boxer brief.",
+            "sample": "boxer-white.jpg"
+          }
+        },
+        "x3": {
+          "type": "product",
+          "settings": {
+            "title": "Charcoal Long Brief",
+            "price": 1590,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Longer charcoal brief for colder mornings.",
+            "sample": "boxer-charcoal.jpg"
+          }
+        },
+        "x4": {
+          "type": "product",
+          "settings": {
+            "title": "Sand Seamless 2-Pack",
+            "price": 2150,
+            "compare": 2600,
+            "badge": "Sale",
+            "blurb": "Two sand seamless trunks.",
+            "sample": "boxer-sand.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "x1",
+        "x2",
+        "x3",
+        "x4"
+      ]
+    },
+    "featured": {
+      "type": "product-rail",
+      "settings": {
+        "anchor": "featured",
+        "kicker": "Sale",
+        "heading": "Hot deals",
+        "copy": "Twelve pieces from the winter edit. Replace any of them in the theme editor.",
+        "layout": "grid",
+        "limit": 12
+      },
+      "blocks": {
+        "f1": {
+          "type": "product",
+          "settings": {
+            "title": "Merino Rib Vest",
+            "price": 2450,
+            "compare": 3200,
+            "badge": "Sale",
+            "blurb": "Fine-gauge ivory merino. Light in a heated room, warm on the walk out.",
+            "sample": "vest-ivory.jpg"
+          }
+        },
+        "f2": {
+          "type": "product",
+          "settings": {
+            "title": "Thermal Zip Vest",
+            "price": 3200,
+            "compare": 3900,
+            "badge": "Sale",
+            "blurb": "Charcoal thermal with a short zip. The layer under a coat.",
+            "sample": "vest-charcoal.jpg"
+          }
+        },
+        "f3": {
+          "type": "product",
+          "settings": {
+            "title": "Fog V-Neck Vest",
+            "price": 2890,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Fog grey V-neck in a fine wool gauge.",
+            "sample": "vest-fog.jpg"
+          }
+        },
+        "f4": {
+          "type": "product",
+          "settings": {
+            "title": "Quilted Ink Vest",
+            "price": 5400,
+            "compare": 6400,
+            "badge": "Sale",
+            "blurb": "Ink quilted shell. The outer layer when a coat is too much.",
+            "sample": "vest-ink.jpg"
+          }
+        },
+        "f5": {
+          "type": "product",
+          "settings": {
+            "title": "Oatmeal Crew 3-Pack",
+            "price": 1650,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Three oatmeal merino crews.",
+            "sample": "socks-oat.jpg"
+          }
+        },
+        "f6": {
+          "type": "product",
+          "settings": {
+            "title": "Navy Rib Dress Sock",
+            "price": 890,
+            "compare": 1100,
+            "badge": "Sale",
+            "blurb": "Fine navy rib for leather shoes.",
+            "sample": "socks-navy.jpg"
+          }
+        },
+        "f7": {
+          "type": "product",
+          "settings": {
+            "title": "Stone Trail Sock",
+            "price": 1190,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Stone grey trail crew with a cushioned sole.",
+            "sample": "socks-stone.jpg"
+          }
+        },
+        "f8": {
+          "type": "product",
+          "settings": {
+            "title": "Silk Ankle Sock",
+            "price": 1450,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Black silk-blend ankle for loafers.",
+            "sample": "socks-black.jpg"
+          }
+        },
+        "f9": {
+          "type": "product",
+          "settings": {
+            "title": "Slate Modal Trunk",
+            "price": 1290,
+            "compare": 1590,
+            "badge": "Sale",
+            "blurb": "Slate modal trunk with a short leg.",
+            "sample": "boxer-slate.jpg"
+          }
+        },
+        "f10": {
+          "type": "product",
+          "settings": {
+            "title": "White Cotton Brief",
+            "price": 990,
+            "compare": 0,
+            "badge": "",
+            "blurb": "White cotton boxer brief.",
+            "sample": "boxer-white.jpg"
+          }
+        },
+        "f11": {
+          "type": "product",
+          "settings": {
+            "title": "Charcoal Long Brief",
+            "price": 1590,
+            "compare": 0,
+            "badge": "",
+            "blurb": "Longer charcoal brief for colder mornings.",
+            "sample": "boxer-charcoal.jpg"
+          }
+        },
+        "f12": {
+          "type": "product",
+          "settings": {
+            "title": "Sand Seamless 2-Pack",
+            "price": 2150,
+            "compare": 2600,
+            "badge": "Sale",
+            "blurb": "Two sand seamless trunks.",
+            "sample": "boxer-sand.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8",
+        "f9",
+        "f10",
+        "f11",
+        "f12"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "vests",
+    "socks",
+    "boxers",
+    "featured"
+  ]
+}

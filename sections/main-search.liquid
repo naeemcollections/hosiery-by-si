@@ -1,0 +1,19 @@
+<section class="rail narrow">
+  <h1 class="display">Search</h1>
+  <form action="{{ routes.search_url }}" method="get" role="search">
+    <input class="field" type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search">
+  </form>
+  <div class="grid">
+    {% for item in search.results %}
+      {% if item.object_type == 'product' %}
+        {% assign rupees = item.price | divided_by: 100 %}
+        {% capture img %}{{ item.featured_image | image_url: width: 900 }}{% endcapture %}
+        {% render 'card', id: item.id, title: item.title, price: rupees, compare: 0, blurb: '', image: img, badge: '' %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{ "name": "Search", "settings": [] }
+{% endschema %}

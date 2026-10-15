@@ -1,0 +1,74 @@
+<section class="hero-wrap" data-slider data-autoplay="{{ section.settings.seconds | times: 1000 }}">
+  <div class="hero">
+    {% for block in section.blocks %}
+      <article class="slide{% if forloop.first %} is-on{% endif %}" data-slide {{ block.shopify_attributes }}>
+        {% if block.settings.image != blank %}
+          <img src="{{ block.settings.image | image_url: width: 2000 }}" alt="" width="1792" height="1008">
+        {% else %}
+          <img src="{{ block.settings.sample | asset_url }}" alt="" width="1792" height="1008">
+        {% endif %}
+        <div class="hero-copy glass">
+          <p class="kicker">{{ block.settings.eyebrow }}</p>
+          <h2 class="display xl">{{ block.settings.title }}</h2>
+          <p>{{ block.settings.text }}</p>
+          {% if block.settings.button != blank %}
+            <a class="btn" href="{{ block.settings.link }}">{{ block.settings.button }}</a>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+    <div class="hero-nav">
+      <button type="button" data-prev aria-label="Previous banner">‹</button>
+      <button type="button" data-next aria-label="Next banner">›</button>
+    </div>
+    <div class="dots">
+      {% for block in section.blocks %}
+        <button type="button" data-dot aria-label="Banner {{ forloop.index }}"{% if forloop.first %} class="is-on"{% endif %}></button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner slider",
+  "settings": [
+    {
+      "type": "range",
+      "id": "seconds",
+      "label": "Auto-slide seconds",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "default": 5
+    }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Banner",
+      "settings": [
+        { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Winter sale" },
+        { "type": "text", "id": "title", "label": "Heading", "default": "Layers, cut in glass light." },
+        { "type": "textarea", "id": "text", "label": "Text", "default": "Merino and quilted vests for the cold commute." },
+        { "type": "text", "id": "button", "label": "Button", "default": "Shop vests" },
+        { "type": "text", "id": "link", "label": "Button link", "default": "#vests" },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        {
+          "type": "select",
+          "id": "sample",
+          "label": "Sample image",
+          "options": [
+            { "value": "banner-vest.jpg", "label": "Vest banner" },
+            { "value": "banner-socks.jpg", "label": "Socks banner" },
+            { "value": "banner-boxers.jpg", "label": "Boxers banner" }
+          ],
+          "default": "banner-vest.jpg"
+        }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Banner slider" }]
+}
+{% endschema %}

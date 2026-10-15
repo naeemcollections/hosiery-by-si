@@ -1,0 +1,22 @@
+<section class="rail">
+  <div class="section-head">
+    <h1 class="display">{{ collection.title }}</h1>
+    {% if collection.description != blank %}
+      <div class="muted">{{ collection.description }}</div>
+    {% endif %}
+  </div>
+  <div class="grid">
+    {% for product in collection.products %}
+      {% assign rupees = product.price | divided_by: 100 %}
+      {% assign was = product.compare_at_price | divided_by: 100 %}
+      {% capture img %}{{ product.featured_image | image_url: width: 900 }}{% endcapture %}
+      {% render 'card', id: product.id, title: product.title, price: rupees, compare: was, blurb: '', image: img, badge: '' %}
+    {% else %}
+      <p class="muted">This collection is empty.</p>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{ "name": "Collection", "settings": [] }
+{% endschema %}

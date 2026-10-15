@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      {{ page_title }}
+      {%- unless page_title contains shop.name %} — {{ shop.name }}{% endunless -%}
+    </title>
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    {{ content_for_header }}
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    <style>
+      :root {
+        --ice: {{ settings.color_ice }};
+        --ink: {{ settings.color_ink }};
+        --fjord: {{ settings.color_fjord }};
+        --ember: {{ settings.color_ember }};
+        --mist: #f6f8fb;
+        --muted: #5c6773;
+        --line: #c5d0dc;
+      }
+    </style>
+  </head>
+  <body
+    data-wa="{{ settings.whatsapp_number | escape }}"
+    data-store="{{ shop.name | escape }}"
+    data-free="{{ settings.free_shipping_amount }}"
+  >
+    <a class="skip" href="#MainContent">Skip to content</a>
+    {% section 'announcement-bar' %}
+    {% section 'header' %}
+    <main id="MainContent">
+      {{ content_for_layout }}
+    </main>
+    {% section 'footer' %}
+    {% render 'cart-drawer' %}
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
+  </body>
+</html>

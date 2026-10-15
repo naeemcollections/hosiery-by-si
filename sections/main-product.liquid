@@ -1,0 +1,56 @@
+<section class="product-page">
+  {% assign product = product %}
+  {% assign rupees = product.price | divided_by: 100 %}
+  {% assign was = product.compare_at_price | divided_by: 100 %}
+  <div class="product-grid">
+    {% if product.featured_image %}
+      <img class="glass round" src="{{ product.featured_image | image_url: width: 1400 }}" alt="{{ product.title | escape }}" width="900" height="1200">
+    {% endif %}
+    <div class="glass panel">
+      <p class="kicker">{{ product.type | default: product.vendor }}</p>
+      <h1 class="display">{{ product.title }}</h1>
+      <p class="price lg">Rs {{ rupees }}{% if was > rupees %} <s>Rs {{ was }}</s>{% endif %}</p>
+      <div class="rte">{{ product.description }}</div>
+      {% form 'product', product %}
+        {% unless product.has_only_default_variant %}
+          <label class="kicker" for="variant">Option</label>
+          <select class="field" id="variant" name="id">
+            {% for variant in product.variants %}
+              <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+                {{ variant.title }} — Rs {{ variant.price | divided_by: 100 }}
+              </option>
+            {% endfor %}
+          </select>
+        {% else %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        {% endunless %}
+        <p class="kicker">Quantity</p>
+        <div class="qty" data-qty>
+          <button type="button" data-dec aria-label="Decrease quantity">−</button>
+          <input data-qty-input type="number" min="1" max="99" value="1" name="quantity" aria-label="Quantity">
+          <button type="button" data-inc aria-label="Increase quantity">+</button>
+        </div>
+        <div class="buy-row stack">
+          <button
+            class="btn"
+            type="button"
+            data-add
+            data-id="{{ product.id }}"
+            data-name="{{ product.title | escape }}"
+            data-price="{{ rupees }}"
+            data-image="{{ product.featured_image | image_url: width: 400 }}"
+          >Add to bag</button>
+          <button class="btn ember" type="button" data-wa-single>Order on WhatsApp</button>
+        </div>
+        <p class="muted">Orders are received on WhatsApp only.</p>
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product",
+  "settings": []
+}
+{% endschema %}

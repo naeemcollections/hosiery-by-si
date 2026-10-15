@@ -1,0 +1,43 @@
+{% if section.blocks.size > 0 %}
+  <div class="marquee" style="background: var(--fjord); color: var(--mist);">
+    <div class="marquee-track">
+      {% for copy in (1..2) %}
+        <div class="marquee-group">
+          {% for block in section.blocks %}
+            <span {{ block.shopify_attributes }}>{{ block.settings.text }}<span class="dot">·</span></span>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Message",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "❄️  Winter sale is live now"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement bar",
+      "blocks": [
+        { "type": "message", "settings": { "text": "🚚  Free shipping over Rs 3,000" } },
+        { "type": "message", "settings": { "text": "❄️  Winter sale is live now" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,38 @@
+<article class="glass card">
+  <div class="shot-wrap">
+    {% if image != blank %}
+      <img src="{{ image }}" alt="{{ title | escape }}" width="800" height="1066" loading="lazy">
+    {% endif %}
+    {% if badge != blank %}
+      <span class="badge">{{ badge }}</span>
+    {% endif %}
+  </div>
+  <div class="card-body">
+    <h3>{{ title }}</h3>
+    <p class="price">
+      Rs {{ price }}
+      {% if compare != blank and compare > price %}
+        <s>Rs {{ compare }}</s>
+      {% endif %}
+    </p>
+    {% if blurb != blank %}
+      <p class="muted blurb">{{ blurb }}</p>
+    {% endif %}
+    <div class="buy-row">
+      <div class="qty" data-qty>
+        <button type="button" data-dec aria-label="Decrease quantity">−</button>
+        <input data-qty-input type="number" min="1" max="99" value="1" aria-label="Quantity for {{ title | escape }}">
+        <button type="button" data-inc aria-label="Increase quantity">+</button>
+      </div>
+      <button
+        class="btn"
+        type="button"
+        data-add
+        data-id="{{ id | escape }}"
+        data-name="{{ title | escape }}"
+        data-price="{{ price }}"
+        data-image="{{ image | escape }}"
+      >Add</button>
+    </div>
+  </div>
+</article>

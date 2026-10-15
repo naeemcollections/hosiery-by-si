@@ -1,0 +1,43 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Hosiery by Si",
+    "theme_version": "1.0.0",
+    "theme_author": "Hosiery by Si",
+    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
+    "theme_support_url": "https://help.shopify.com/manual/online-store/themes"
+  },
+  {
+    "name": "Store",
+    "settings": [
+      {
+        "type": "text",
+        "id": "whatsapp_number",
+        "label": "WhatsApp number",
+        "info": "Country code, digits only. Example: 923001234567",
+        "default": "923001234567"
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_amount",
+        "label": "Free shipping over (Rs)",
+        "default": 3000
+      },
+      {
+        "type": "textarea",
+        "id": "footer_note",
+        "label": "Footer note",
+        "default": "Orders are received on WhatsApp only. We confirm size and delivery in the chat."
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      { "type": "color", "id": "color_ice", "label": "Ice background", "default": "#e4ebf3" },
+      { "type": "color", "id": "color_ink", "label": "Ink", "default": "#12161c" },
+      { "type": "color", "id": "color_fjord", "label": "Fjord", "default": "#143848" },
+      { "type": "color", "id": "color_ember", "label": "Ember", "default": "#c45c26" }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="glass bar">
+    <a class="logo" href="{{ routes.root_url }}">{{ shop.name }}</a>
+    <nav class="desk-nav">
+      <a href="{{ routes.root_url }}#vests">Vests</a>
+      <a href="{{ routes.root_url }}#socks">Socks</a>
+      <a href="{{ routes.root_url }}#boxers">Boxers</a>
+      <a href="{{ routes.root_url }}#featured">Hot deals</a>
+    </nav>
+    <button class="icon-btn" type="button" data-open-bag aria-label="Open bag">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg>
+      <span class="count" data-bag-count hidden>0</span>
+    </button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="{{ routes.root_url }}#vests">Vests</a>
+    <a href="{{ routes.root_url }}#socks">Socks</a>
+    <a href="{{ routes.root_url }}#boxers">Boxers</a>
+    <a href="{{ routes.root_url }}#featured">Hot deals</a>
+  </nav>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}

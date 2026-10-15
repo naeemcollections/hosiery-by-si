@@ -1,0 +1,22 @@
+{
+  "current": {
+    "whatsapp_number": "923001234567",
+    "free_shipping_amount": 3000,
+    "footer_note": "Orders are received on WhatsApp only. We confirm size and delivery in the chat.",
+    "color_ice": "#e4ebf3",
+    "color_ink": "#12161c",
+    "color_fjord": "#143848",
+    "color_ember": "#c45c26",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "ship": { "type": "message", "settings": { "text": "🚚  Free shipping over Rs 3,000" } },
+          "sale": { "type": "message", "settings": { "text": "❄️  Winter sale is live now" } }
+        },
+        "block_order": ["ship", "sale"],
+        "settings": {}
+      }
+    }
+  }
+}
