@@ -2,9 +2,11 @@
   <div class="marquee" style="background: var(--fjord); color: var(--mist);">
     <div class="marquee-track">
       {% for copy in (1..2) %}
-        <div class="marquee-group">
-          {% for block in section.blocks %}
-            <span {{ block.shopify_attributes }}>{{ block.settings.text }}<span class="dot">·</span></span>
+        <div class="marquee-group"{% if copy == 2 %} aria-hidden="true"{% endif %}>
+          {% for repeat in (1..8) %}
+            {% for block in section.blocks %}
+              <span{% if copy == 1 and repeat == 1 %} {{ block.shopify_attributes }}{% endif %}>{{ block.settings.text }}<span class="dot">·</span></span>
+            {% endfor %}
           {% endfor %}
         </div>
       {% endfor %}
