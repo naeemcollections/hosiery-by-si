@@ -32,7 +32,7 @@
         data-name="{{ title | escape }}"
         data-price="{{ price }}"
         data-image="{{ image | escape }}"
-      >Add</button>
+      >{{ settings.add_label | default: 'Add' }}</button>
     </div>
   </div>
 </article>

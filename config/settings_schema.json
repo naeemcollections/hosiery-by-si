@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "theme_name": "Hosiery by Si",
-    "theme_version": "1.0.0",
+    "theme_version": "1.1.0",
     "theme_author": "Hosiery by Si",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://help.shopify.com/manual/online-store/themes"
@@ -10,6 +10,72 @@
   {
     "name": "Store",
     "settings": [
+      {
+        "type": "text",
+        "id": "store_name",
+        "label": "Store name",
+        "default": "Hosiery by Si"
+      },
+      {
+        "type": "text",
+        "id": "tagline",
+        "label": "Tagline",
+        "default": "Winter glass edit"
+      },
+      {
+        "type": "text",
+        "id": "nav_vests",
+        "label": "Vests menu label",
+        "default": "Vests"
+      },
+      {
+        "type": "text",
+        "id": "nav_socks",
+        "label": "Socks menu label",
+        "default": "Socks"
+      },
+      {
+        "type": "text",
+        "id": "nav_boxers",
+        "label": "Boxers menu label",
+        "default": "Boxers"
+      },
+      {
+        "type": "text",
+        "id": "nav_deals",
+        "label": "Hot deals menu label",
+        "default": "Hot deals"
+      },
+      {
+        "type": "text",
+        "id": "add_label",
+        "label": "Add button",
+        "default": "Add"
+      },
+      {
+        "type": "text",
+        "id": "wa_label",
+        "label": "WhatsApp button",
+        "default": "Send order on WhatsApp"
+      },
+      {
+        "type": "text",
+        "id": "bag_title",
+        "label": "Bag title",
+        "default": "Your bag"
+      },
+      {
+        "type": "text",
+        "id": "clear_label",
+        "label": "Clear bag button",
+        "default": "Clear bag"
+      },
+      {
+        "type": "text",
+        "id": "empty_bag",
+        "label": "Empty bag text",
+        "default": "The bag is empty. Choose a quantity and add a piece."
+      },
       {
         "type": "text",
         "id": "whatsapp_number",
@@ -22,6 +88,12 @@
         "id": "free_shipping_amount",
         "label": "Free shipping over (Rs)",
         "default": 3000
+      },
+      {
+        "type": "text",
+        "id": "shipping_line",
+        "label": "Footer shipping line",
+        "default": "Free shipping over Rs 3,000. Orders only on WhatsApp."
       },
       {
         "type": "textarea",

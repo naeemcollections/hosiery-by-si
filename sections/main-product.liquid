@@ -39,8 +39,8 @@
             data-name="{{ product.title | escape }}"
             data-price="{{ rupees }}"
             data-image="{{ product.featured_image | image_url: width: 400 }}"
-          >Add to bag</button>
-          <button class="btn ember" type="button" data-wa-single>Order on WhatsApp</button>
+          >Add {{ settings.add_label | default: 'Add' }}</button>
+          <button class="btn ember" type="button" data-wa-single>{{ settings.wa_label }}</button>
         </div>
         <p class="muted">Orders are received on WhatsApp only.</p>
       {% endform %}

@@ -29,8 +29,11 @@
   </head>
   <body
     data-wa="{{ settings.whatsapp_number | escape }}"
-    data-store="{{ shop.name | escape }}"
+    data-store="{{ settings.store_name | default: shop.name | escape }}"
     data-free="{{ settings.free_shipping_amount }}"
+    data-empty="{{ settings.empty_bag | escape }}"
+    data-ship-over="Free shipping is included."
+    data-ship-under="more for free shipping."
   >
     <a class="skip" href="#MainContent">Skip to content</a>
     {% section 'announcement-bar' %}

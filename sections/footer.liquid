@@ -1,8 +1,8 @@
 <footer class="site-footer">
   <div class="glass panel">
-    <p class="display">{{ shop.name }}</p>
+    <p class="display">{{ settings.store_name | default: shop.name }}</p>
     <p class="muted">{{ settings.footer_note }}</p>
-    <p>Free shipping over Rs {{ settings.free_shipping_amount }}. Orders only on WhatsApp.</p>
+    <p>{{ settings.shipping_line }}</p>
   </div>
 </footer>
 

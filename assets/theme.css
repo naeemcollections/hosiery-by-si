@@ -65,7 +65,8 @@ h1.display, h2.display { font-size: clamp(2.2rem, 4vw, 3.4rem); }
   gap: 0.5rem;
   padding: 0.45rem 0.55rem 0.45rem 1rem;
 }
-.logo { font-family: Fraunces, serif; font-size: 1.7rem; text-decoration: none; }
+.logo { font-family: Fraunces, serif; font-size: 1.35rem; text-decoration: none; line-height: 1; display: grid; }
+.tagline { font-family: Outfit, sans-serif; font-size: 0.75rem; color: var(--muted); font-weight: 400; }
 .desk-nav { margin-left: auto; display: none; gap: 0.25rem; }
 .desk-nav a, .mobile-nav a { text-decoration: none; padding: 0.55rem 0.8rem; border-radius: 999px; }
 .icon-btn {
@@ -116,21 +117,17 @@ h1.display, h2.display { font-size: clamp(2.2rem, 4vw, 3.4rem); }
 .dots button.is-on { background: white; }
 
 .section-head { max-width: 36rem; margin-bottom: 1rem; }
-.scroller { display: flex; gap: 0.8rem; overflow: auto; padding-bottom: 0.4rem; }
-.scroller > * { width: 72%; flex: 0 0 auto; }
-.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
-@media (min-width: 960px) {
-  .scroller { display: grid; grid-template-columns: repeat(4, 1fr); overflow: visible; }
-  .scroller > * { width: auto; }
-  .grid { grid-template-columns: repeat(4, 1fr); }
+.scroller, .grid { display: grid; grid-template-columns: 1fr; gap: 0.8rem; }
+@media (min-width: 720px) {
+  .scroller, .grid { grid-template-columns: 1fr 1fr; }
 }
-.card { border-radius: 1.4rem; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
-.shot-wrap { position: relative; }
-.shot-wrap img, .card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
-.badge { position: absolute; left: 0.7rem; top: 0.7rem; background: var(--ember); color: white; border-radius: 999px; padding: 0.25rem 0.55rem; font-size: 0.75rem; }
-.card-body { padding: 0.9rem; display: flex; flex-direction: column; gap: 0.55rem; flex: 1; }
+.card { border-radius: 1.4rem; overflow: hidden; display: flex; flex-direction: row; align-items: stretch; gap: 0.7rem; padding: 0.45rem; }
+.shot-wrap { position: relative; width: 6.6rem; flex: 0 0 6.6rem; }
+.shot-wrap img { width: 6.6rem; height: 8.5rem; object-fit: cover; display: block; border-radius: 0.9rem; }
+.badge { position: absolute; left: 0.3rem; top: 0.3rem; background: var(--ember); color: white; border-radius: 999px; padding: 0.15rem 0.4rem; font-size: 0.68rem; }
+.card-body { padding: 0.35rem 0.4rem 0.35rem 0; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; min-width: 0; }
 .card-body h3 { margin: 0; font-size: 1rem; font-weight: 560; }
-.blurb { margin: 0; font-size: 0.9rem; }
+.blurb { display: none; }
 .buy-row { display: flex; gap: 0.45rem; align-items: center; flex-wrap: wrap; margin-top: auto; }
 .buy-row.stack { flex-direction: column; align-items: stretch; }
 .qty { display: inline-flex; align-items: center; height: 2.75rem; border-radius: 999px; border: 1px solid var(--line); background: rgb(255 255 255 / 0.8); }
@@ -150,9 +147,9 @@ h1.display, h2.display { font-size: clamp(2.2rem, 4vw, 3.4rem); }
 .site-footer .display { font-size: 2.6rem; margin-bottom: 0.6rem; }
 .product-page, .narrow { max-width: 72rem; margin: 1rem auto 3rem; padding: 0 1rem; }
 .narrow { max-width: 40rem; }
-.product-grid { display: grid; gap: 1rem; }
-@media (min-width: 900px) { .product-grid { grid-template-columns: 1.1fr 0.9fr; align-items: start; } }
-.round { border-radius: 1.5rem; width: 100%; }
+.product-page .panel { flex: 1; min-width: 16rem; }
+.product-grid { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; }
+.product-grid > img, .round { width: 10.5rem; height: 13.5rem; object-fit: cover; border-radius: 1.2rem; }
 
 .drawer[hidden] { display: none; }
 .drawer { position: fixed; inset: 0; z-index: 30; display: flex; justify-content: flex-end; }

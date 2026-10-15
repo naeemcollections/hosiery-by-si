@@ -57,7 +57,7 @@
     if (lines.length === 0) {
       var empty = document.createElement("p");
       empty.className = "muted";
-      empty.textContent = "The bag is empty. Choose a quantity and add a piece.";
+      empty.textContent = body.dataset.empty || "The bag is empty. Choose a quantity and add a piece.";
       linesEl.appendChild(empty);
     }
     lines.forEach(function (line) {
